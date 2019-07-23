@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">PraBot</string>
+    <string name="login">LOGIN</string>
+    <string name="username">Username</string>
+    <string name="pass">Password</string>
+    <string name="mulai">Mulai</string>
+    <string name="help">Help</string>
+    <string name="about">About</string>
+    <string name="exit">Exit</string>
+    <string name="prabot">Prabot</string>
+    <string name="prabot2">Pramuka Robot</string>
+    <string name="go">Go</string>
+    <string-array name="sandi_huruf">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>G</item>
+        <item>H</item>
+        <item>I</item>
+        <item>J</item>
+        <item>K</item>
+        <item>L</item>
+        <item>M</item>
+        <item>N</item>
+        <item>O</item>
+        <item>P</item>
+        <item>Q</item>
+        <item>R</item>
+        <item>S</item>
+        <item>T</item>
+        <item>U</item>
+        <item>V</item>
+        <item>W</item>
+        <item>X</item>
+        <item>Y</item>
+        <item>Z</item>
+    </string-array>
+</resources>

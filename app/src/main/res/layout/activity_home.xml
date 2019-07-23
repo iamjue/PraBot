@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:paddingLeft="40dp"
+    android:paddingRight="40dp"
+    tools:context=".HomeActivity">
+
+    <Button
+        android:id="@+id/btn_mulai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/mulai" />
+
+    <Button
+        android:id="@+id/btn_help"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_mulai"
+        android:layout_marginTop="15dp"
+        android:text="@string/help" />
+
+    <Button
+        android:id="@+id/btn_about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_help"
+        android:layout_marginTop="15dp"
+        android:text="@string/about" />
+
+    <Button
+        android:id="@+id/btn_exit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_about"
+        android:layout_marginTop="15dp"
+        android:text="@string/exit" />
+
+</RelativeLayout>
