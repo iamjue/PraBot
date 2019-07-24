@@ -38,4 +38,21 @@
         <item>Y</item>
         <item>Z</item>
     </string-array>
+
+    <string name="help_deskrip1">
+        1.Klik ikon WiFi pada HP
+    </string>
+    <string name="help_deskrip2">
+        2.Pilih / Koneksikan ke WiFi "ESP8266"
+    </string>
+    <string name="help_deskrip3">
+        3.Jika sudah \'Connected\' maka tombol WiFi akan menyala, sebaliknya jika \'Not Connected\' maka tombol tidak menyala
+    </string>
+    <string name="help_deskrip4">
+        4.Tekan tombol \'POS 0\'  untuk memposisikan robot ke posisi awal
+    </string>
+    <string name="help_deskrip5">
+        5.Tekan salah satu tombol
+    </string>
+    <string name="selesai">Selesai</string>
 </resources>
