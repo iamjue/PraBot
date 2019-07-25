@@ -1,9 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_gravity="center"
+android:layout_marginLeft="40dp"
+android:layout_marginRight="40dp"
+app:cardCornerRadius="10dp"
+tools:context=".HelpActivity"
+    android:id="@+id/cardview_help">
+
+<LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".HelpActivity">
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="30dp"
+        android:text="@string/help"
+        android:textAlignment="center"
+        android:textColor="@color/colorBlack"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_help_deskrip1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/help_deskrip1"
+        android:textColor="@color/colorBlack" />
+
+    <TextView
+        android:id="@+id/tv_help_deskrip2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/help_deskrip2"
+        android:textColor="@color/colorBlack" />
+
+    <TextView
+        android:id="@+id/tv_help_deskrip3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/help_deskrip3"
+        android:textColor="@color/colorBlack" />
+
+    <TextView
+        android:id="@+id/tv_help_deskrip4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/help_deskrip4"
+        android:textColor="@color/colorBlack" />
+
+    <TextView
+        android:id="@+id/tv_help_deskrip5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/help_deskrip5"
+        android:textColor="@color/colorBlack" />
+
+    <Button
+        android:id="@+id/btn_selesai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="42dp"
+        android:text="@string/selesai"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold" />
+</LinearLayout>
 
 
-</RelativeLayout>
+</android.support.v7.widget.CardView>
