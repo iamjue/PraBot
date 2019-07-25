@@ -6,13 +6,40 @@
     android:gravity="center"
     android:paddingLeft="40dp"
     android:paddingRight="40dp"
-    tools:context=".HomeActivity">
+    tools:context=".HomeActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/prabot"
+        android:textAlignment="center"
+        android:textColor="@color/colorBlack"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_pramuka_robot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_login"
+        android:text="@string/prabot3"
+        android:textAlignment="center"
+        android:textColor="@color/colorBlack"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/btn_mulai"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/mulai" />
+        android:text="@string/mulai"
+        android:layout_below="@id/tv_pramuka_robot"
+        android:textSize="18sp"
+        android:layout_marginTop="80dp"
+        android:background="@color/colorBrownDark"
+        android:textColor="@color/colorWhite"/>
 
     <Button
         android:id="@+id/btn_help"
@@ -20,7 +47,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/btn_mulai"
         android:layout_marginTop="15dp"
-        android:text="@string/help" />
+        android:text="@string/help"
+        android:textSize="18sp"
+        android:background="@color/colorBrownDark"
+        android:textColor="@color/colorWhite"/>
 
     <Button
         android:id="@+id/btn_about"
@@ -28,7 +58,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/btn_help"
         android:layout_marginTop="15dp"
-        android:text="@string/about" />
+        android:text="@string/about"
+        android:textSize="18sp"
+        android:background="@color/colorBrownDark"
+        android:textColor="@color/colorWhite"/>
 
     <Button
         android:id="@+id/btn_exit"
@@ -36,6 +69,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/btn_about"
         android:layout_marginTop="15dp"
-        android:text="@string/exit" />
+        android:text="@string/exit"
+        android:textSize="18sp"
+        android:background="@color/colorBrownDark"
+        android:textColor="@color/colorWhite"/>
 
 </RelativeLayout>
