@@ -55,4 +55,8 @@
         5.Tekan salah satu tombol
     </string>
     <string name="selesai">Selesai</string>
+    <string name="prabot3">Pramuka Robot</string>
+    <string name="isi_about">Aplikasi Prabot ( Pramuka Robot ) ini merupakan aplikasi yang  berfungsi sebagai sistem  kendali Robot Semaphore</string>
+    <string name="versi">Prabot v 1.0</string>
+    <string name="biodata">Biodata</string>
 </resources>

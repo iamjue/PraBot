@@ -59,9 +59,9 @@ public class DataSandiPresenter{
         this.context = context;
     }
     public void LoadDataSandi() {
-        String URL = server.getDataSandi();
-        final ArrayList<DataSandiItem> dataSandiItems = new ArrayList<>();
 
+        final ArrayList<DataSandiItem> dataSandiItems = new ArrayList<>();
+        String URL = server.getDataSandi();
         StringRequest stringRequest = new StringRequest(Request.Method.GET, URL, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {

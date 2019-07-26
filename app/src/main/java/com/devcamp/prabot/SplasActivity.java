@@ -16,7 +16,7 @@ public class SplasActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent Home = new Intent(SplasActivity.this, MainActivity.class);
+                Intent Home = new Intent(SplasActivity.this, LoginActivity.class);
                 startActivity(Home);
                 finish();
             }
