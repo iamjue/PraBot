@@ -29,7 +29,7 @@ public class LoginActivity extends AppCompatActivity {
 
     ProgressDialog pDialog;
     Button btnLogin;
-    EditText etUsername, etPassword;
+    EditText etUsername, edtPassword;
 
 
     int success;
@@ -55,61 +55,61 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate( savedInstanceState );
-        setContentView( R.layout.activity_login );
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login);
 
-        conMgr = (ConnectivityManager) getSystemService( Context.CONNECTIVITY_SERVICE );
+        conMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         {
             if (conMgr.getActiveNetworkInfo() != null
                     && conMgr.getActiveNetworkInfo().isAvailable()
                     && conMgr.getActiveNetworkInfo().isConnected()) {
             } else {
-                Toast.makeText( getApplicationContext(), "No Internet Connection",
-                        Toast.LENGTH_LONG ).show();
+                Toast.makeText(getApplicationContext(), "No Internet Connection",
+                        Toast.LENGTH_LONG).show();
             }
         }
 
-        btnLogin = (Button) findViewById( R.id.btn_login );
+        btnLogin = (Button) findViewById(R.id.btn_login);
 
-        etUsername = findViewById( R.id.edt_username );
-        etPassword =findViewById( R.id.edt_password );
+        etUsername = findViewById(R.id.edt_username);
+        edtPassword = findViewById(R.id.edt_password);
 
         // Cek session login jika TRUE maka langsung buka MainActivity
-        sharedpreferences = getSharedPreferences( my_shared_preferences, Context.MODE_PRIVATE );
-        session = sharedpreferences.getBoolean( session_status, false );
-        id = sharedpreferences.getString( TAG_ID, null );
-        username = sharedpreferences.getString( TAG_USERNAME, null );
+        sharedpreferences = getSharedPreferences(my_shared_preferences, Context.MODE_PRIVATE);
+        session = sharedpreferences.getBoolean(session_status, false);
+        id = sharedpreferences.getString(TAG_ID, null);
+        username = sharedpreferences.getString(TAG_USERNAME, null);
 
         if (session) {
-            Intent intent = new Intent( LoginActivity.this, HomeActivity.class );
-            intent.putExtra( TAG_ID, id );
-            intent.putExtra( TAG_USERNAME, username );
+            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+            intent.putExtra(TAG_ID, id);
+            intent.putExtra(TAG_USERNAME, username);
             finish();
-            startActivity( intent );
+            startActivity(intent);
         }
-        btnLogin.setOnClickListener( new View.OnClickListener() {
+        btnLogin.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 String username = etUsername.getText().toString().trim();
-                String password = etPassword.getText().toString().trim();
+                String password = edtPassword.getText().toString().trim();
 
                 // mengecek kolom yang kosong
                 if (username.trim().length() > 0 && password.trim().length() > 0) {
                     if (conMgr.getActiveNetworkInfo() != null
                             && conMgr.getActiveNetworkInfo().isAvailable()
                             && conMgr.getActiveNetworkInfo().isConnected()) {
-                        checkLogin( username, password );
+                        checkLogin(username, password);
                     } else {
-                        Toast.makeText( getApplicationContext(), "No Internet Connection", Toast.LENGTH_LONG ).show();
+                        Toast.makeText(getApplicationContext(), "No Internet Connection", Toast.LENGTH_LONG).show();
                     }
                 } else {
                     // Prompt user to enter credentials
-                    Toast.makeText( getApplicationContext(), "Kolom tidak boleh kosong", Toast.LENGTH_LONG ).show();
+                    Toast.makeText(getApplicationContext(), "Kolom tidak boleh kosong", Toast.LENGTH_LONG).show();
                 }
             }
-        } );
+        });
     }
 
     private void checkLogin(final String username, final String password) {
@@ -222,5 +222,4 @@ public class LoginActivity extends AppCompatActivity {
         if (pDialog.isShowing())
             pDialog.dismiss();
     }
-
 }

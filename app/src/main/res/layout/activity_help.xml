@@ -74,7 +74,8 @@
             android:layout_gravity="right"
             android:layout_marginTop="42dp"
             android:text="@string/selesai"
-            android:textColor="@color/colorBlack"
+            android:background="@color/colorBgicon"
+            android:textColor="@color/colorWhite"
             android:textStyle="bold" />
     </LinearLayout>
 

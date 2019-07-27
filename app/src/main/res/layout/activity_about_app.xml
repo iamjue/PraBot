@@ -2,13 +2,14 @@
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_aboutApp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
     android:layout_marginLeft="40dp"
     android:layout_marginRight="40dp"
     app:cardCornerRadius="10dp"
-    tools:context=".AboutActivity">
+    tools:context=".AboutAppActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,6 +18,7 @@
         android:padding="15dp">
 
         <TextView
+            android:id="@+id/tv_about"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="30dp"
@@ -30,32 +32,34 @@
             android:id="@+id/tv_isiabout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
             android:text="@string/isi_about"
             android:textColor="@color/colorBlack" />
 
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="20dp"
             android:layout_marginTop="70dp"
-            >
+            android:padding="20dp">
+
             <TableRow>
+
                 <Button
                     android:id="@+id/btn_biodata"
-                    android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@color/colorBrown"
+                    android:layout_gravity="center"
+                    android:background="@color/colorBgicon"
                     android:text="@string/biodata"
                     android:textColor="@color/colorWhite" />
 
                 <Button
                     android:id="@+id/btn_selesai_about"
-                    android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@color/colorBrown"
+                    android:layout_gravity="center"
                     android:layout_marginLeft="56dp"
+                    android:background="@color/colorBgicon"
                     android:text="@string/selesai"
                     android:textColor="@color/colorWhite" />
             </TableRow>
