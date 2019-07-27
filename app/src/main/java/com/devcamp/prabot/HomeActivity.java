@@ -16,7 +16,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
     public static final String TAG_ID = "id";
     public static final String TAG_USERNAME = "username";
-    SessionManager sessionManager;
+
     String getId;
     @Override
     protected void onCreate(Bundle saveInstanceState) {
