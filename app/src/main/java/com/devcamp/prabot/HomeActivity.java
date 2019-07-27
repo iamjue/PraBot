@@ -1,15 +1,25 @@
 package com.devcamp.prabot;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.HashMap;
+
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener{
 
     Button btnMulai, btnHelp, btnAbout, btnExit;
+    String id, username;
+    SharedPreferences sharedpreferences;
 
+    public static final String TAG_ID = "id";
+    public static final String TAG_USERNAME = "username";
+    SessionManager sessionManager;
+    String getId;
     @Override
     protected void onCreate(Bundle saveInstanceState) {
         super.onCreate(saveInstanceState);
@@ -34,6 +44,12 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
+
+        sessionManager = new SessionManager(this);
+        sessionManager.checkLogin();
+
+        HashMap<String, String> user = sessionManager.getUserDetail();
+        getId = user.get(sessionManager.ID);
     }
 
     @Override

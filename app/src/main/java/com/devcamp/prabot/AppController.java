@@ -47,4 +47,9 @@ public class AppController extends Application {
             mRequestQueue.cancelAll( tag );
         }
     }
+
+
+    public Object getResourceManager(MulaiActivity mulaiActivity) {
+    return  0;
+    }
 }
