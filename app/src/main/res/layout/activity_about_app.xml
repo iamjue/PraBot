@@ -36,34 +36,55 @@
             android:text="@string/isi_about"
             android:textColor="@color/colorBlack" />
 
-        <TableLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="70dp"
-            android:padding="20dp">
+            android:layout_marginTop="20dp"
+            android:gravity="center">
+            <Button
+                android:id="@+id/btn_biodata"
+                android:layout_width="wrap_content"
+                android:text="@string/biodata"
+                android:layout_height="wrap_content"
+                android:background="@color/colorBgicon"
+                android:textColor="@color/colorWhite"/>
 
-            <TableRow>
+            <Button
+                android:id="@+id/btn_selesai"
+                android:background="@color/colorBgicon"
+                android:textColor="@color/colorWhite"
+                android:layout_marginLeft="30dp"
+                android:layout_toRightOf="@id/btn_biodata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/selesai"/>
+        </RelativeLayout>
 
-                <Button
-                    android:id="@+id/btn_biodata"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="@color/colorBgicon"
-                    android:text="@string/biodata"
-                    android:textColor="@color/colorWhite" />
+        <!--<TableLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="70dp"-->
+            <!--android:padding="20dp">-->
 
-                <Button
-                    android:id="@+id/btn_selesai_about"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="56dp"
-                    android:background="@color/colorBgicon"
-                    android:text="@string/selesai"
-                    android:textColor="@color/colorWhite" />
-            </TableRow>
-        </TableLayout>
+            <!--&lt;!&ndash;<TableRow>&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<Button&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/btn_biodata"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:background="@color/colorBgicon"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:text="@string/biodata"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textColor="@color/colorWhite" />&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<Button&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/btn_selesai_about"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:background="@color/colorBgicon"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:text="@string/selesai"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textColor="@color/colorWhite" />&ndash;&gt;-->
+            <!--&lt;!&ndash;</TableRow>&ndash;&gt;-->
+        <!--&lt;!&ndash;</TableLayout>&ndash;&gt;-->
 
 
         <TextView

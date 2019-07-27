@@ -19,7 +19,7 @@ public class AboutAppActivity extends AppCompatActivity {
 
         cardView = (CardView)findViewById(R.id.cv_aboutApp);
 
-        btnSelesai = (Button)findViewById(R.id.btn_selesai_about);
+        btnSelesai = (Button)findViewById(R.id.btn_selesai);
         btnSelesai.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
