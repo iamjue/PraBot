@@ -48,15 +48,14 @@
         android:orientation="vertical">
 
         <android.support.design.widget.TextInputLayout
-            android:id="@+id/edt_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorBrown"
             android:hint="@string/username"
-            android:inputType="textEmailAddress"
             android:textColorHint="@color/colorWhite">
 
-            <android.support.design.widget.TextInputEditText
+            <EditText
+                android:id="@+id/edt_username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
@@ -67,7 +66,6 @@
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
-            android:id="@+id/edt_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
@@ -75,7 +73,8 @@
             android:textColorHint="@color/colorWhite"
             app:passwordToggleEnabled="true">
 
-            <android.support.design.widget.TextInputEditText
+            <EditText
+                android:id="@+id/edt_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/ic_lock_white_45dp"
@@ -99,5 +98,11 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-
+    <ProgressBar
+        android:id="@+id/loading_in"
+        android:layout_marginTop="35dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
 </RelativeLayout>

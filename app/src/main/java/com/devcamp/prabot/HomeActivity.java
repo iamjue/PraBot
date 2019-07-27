@@ -1,6 +1,8 @@
 package com.devcamp.prabot;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -9,7 +11,13 @@ import android.widget.Button;
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener{
 
     Button btnMulai, btnHelp, btnAbout, btnExit;
+    String id, username;
+    SharedPreferences sharedpreferences;
 
+    public static final String TAG_ID = "id";
+    public static final String TAG_USERNAME = "username";
+
+    String getId;
     @Override
     protected void onCreate(Bundle saveInstanceState) {
         super.onCreate(saveInstanceState);
@@ -25,15 +33,10 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         btnAbout.setOnClickListener(this);
 
         btnExit = (Button) findViewById(R.id.btn_exit);
-        btnExit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                moveTaskToBack(true);
-                finish();
-                System.exit(0);
-            }
-        });
+        btnExit.setOnClickListener(this);
 
+
+        sharedpreferences = getSharedPreferences( LoginActivity.my_shared_preferences, Context.MODE_PRIVATE );
     }
 
     @Override
@@ -50,6 +53,17 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_about:
                 Intent intentAbout = new Intent(HomeActivity.this, AboutActivity.class);
                 startActivity(intentAbout);
+                break;
+            case R.id.btn_exit:
+                SharedPreferences.Editor editor = sharedpreferences.edit();
+                editor.putBoolean( LoginActivity.session_status, false );
+                editor.putString( TAG_ID, null );
+                editor.putString( TAG_USERNAME, null );
+                editor.commit();
+
+                Intent intent = new Intent( HomeActivity.this, LoginActivity.class );
+                finish();
+                startActivity( intent );
                 break;
 
         }
