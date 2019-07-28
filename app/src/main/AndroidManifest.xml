@@ -19,8 +19,6 @@
 
 
         </activity>
-        <activity android:name=".AboutBioActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity android:name=".AboutAppActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity android:name=".HelpActivity"
