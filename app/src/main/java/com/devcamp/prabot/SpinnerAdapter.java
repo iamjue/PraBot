@@ -44,12 +44,12 @@ public class SpinnerAdapter extends BaseAdapter {
         if (convertView == null)
             convertView = inflater.inflate(R.layout.list_datasandi, null);
 
-        TextView dataSandi = (TextView) convertView.findViewById(R.id.tv_spinner);
+        TextView dataSandi = (TextView) convertView.findViewById(R.id.tv_spinner_huruf);
 
         DataSandiItem data;
         data = dataSandiItems.get(position);
 
-        dataSandi.setText(data.getHuruf() +" - X = "+data.derajat_lengan_x+" - Y = "+data.derajat_lengan_y );
+        dataSandi.setText("Huruf "+data.getHuruf());
 
         return convertView;
     }
