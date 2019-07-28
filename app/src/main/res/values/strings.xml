@@ -59,4 +59,9 @@
     <string name="isi_about">Aplikasi Prabot ( Pramuka Robot ) ini merupakan aplikasi yang  berfungsi sebagai sistem  kendali Robot Semaphore</string>
     <string name="versi">Prabot v 1.0</string>
     <string name="biodata">Biodata</string>
+    <string name="nama">Nama : Imanika Dewi</string>
+    <string name="nim">NIM : 201681230</string>
+    <string name="jurusan">Jurusan : Teknik Informatiika</string>
+    <string name="esaunggul">Universitas Esa Unggul Citra Raya</string>
+    <string name="kembali">Kembali</string>
 </resources>

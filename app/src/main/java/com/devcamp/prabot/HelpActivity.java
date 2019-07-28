@@ -1,5 +1,6 @@
 package com.devcamp.prabot;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
@@ -21,7 +22,8 @@ public class HelpActivity extends AppCompatActivity {
         btnSelesai.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                moveTaskToBack(true);
+               startActivity(new Intent(HelpActivity.this, HomeActivity.class));
+               finish();
             }
         });
     }

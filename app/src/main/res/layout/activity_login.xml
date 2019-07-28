@@ -41,17 +41,24 @@
         android:src="@drawable/ic_account_circle_black_24dp" />
 
     <LinearLayout
+        android:id="@+id/linear_layout_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/img_account"
         android:layout_marginTop="25dp"
-        android:orientation="vertical">
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/colorBgicon"
+            android:src="@drawable/ic_email_white_45dp" />
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorBrown"
             android:hint="@string/username"
+            android:background="@color/colorBguser"
             android:textColorHint="@color/colorWhite">
 
             <EditText
@@ -59,17 +66,30 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
-                android:drawableStart="@drawable/ic_email_white_45dp"
+                android:inputType="textEmailAddress"
                 android:textColor="@color/colorWhite"
                 android:textColorHighlight="@color/colorWhite"
                 android:textColorHint="@color/colorWhite" />
         </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_layout_pass"
+        android:layout_width="match_parent"
+        android:layout_marginTop="16dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear_layout_username">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/colorBgicon"
+            android:src="@drawable/ic_lock_white_45dp" />
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:background="@color/colorBrown"
+            android:background="@color/colorBguser"
             android:textColorHint="@color/colorWhite"
             app:passwordToggleEnabled="true">
 
@@ -77,32 +97,30 @@
                 android:id="@+id/edt_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableStart="@drawable/ic_lock_white_45dp"
                 android:hint="@string/pass"
-                android:inputType="textPassword"
-                android:textColor="@color/colorWhite"
-                android:textColorHighlight="@color/colorWhite"
-                android:textColorHint="@color/colorWhite" />
+                android:inputType="textPassword" />
         </android.support.design.widget.TextInputLayout>
-
-        <Button
-            android:id="@+id/btn_login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="30dp"
-            android:background="@color/colorBrownDark"
-            android:text="@string/login"
-            android:textColor="@color/colorWhite"
-            android:textSize="20sp"
-            android:textStyle="bold" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear_layout_pass"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorBgicon"
+        android:text="@string/login"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <ProgressBar
         android:id="@+id/loading_in"
-        android:layout_marginTop="35dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:visibility="gone"/>
+        android:layout_marginTop="35dp"
+        android:visibility="gone" />
 </RelativeLayout>
