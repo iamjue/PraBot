@@ -49,10 +49,10 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:layout_width="50dp"
+            android:layout_width="70dp"
             android:layout_height="50dp"
             android:background="@color/colorBgicon"
-            android:src="@drawable/ic_email_white_45dp" />
+            android:src="@drawable/ic_email_white_24dp" />
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
@@ -81,10 +81,10 @@
         android:layout_below="@id/linear_layout_username">
 
         <ImageView
-            android:layout_width="50dp"
+            android:layout_width="70dp"
             android:layout_height="50dp"
             android:background="@color/colorBgicon"
-            android:src="@drawable/ic_lock_white_45dp" />
+            android:src="@drawable/ic_lock_white_24dp" />
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
