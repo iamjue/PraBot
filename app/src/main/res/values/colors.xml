@@ -7,8 +7,6 @@
     <color name="colorBrown">#A4BF360C</color>
     <color name="colorBrownDark">#D5BF360C</color>
     <color name="colorBlack">#000000</color>
-    <color name="colorBgLogin">#FF3D00</color>
-    <color name="colorBguser">#DBAE71</color>
-    <color name="colorBgicon">#754B09</color>
-
+    <color name="colorBG">#4b4b4b</color>
+    <color name="colorcokelat">#964b00</color>
 </resources>
