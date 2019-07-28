@@ -3,34 +3,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="5dp"
     tools:context=".MulaiActivity"
     android:layout_centerInParent="true">
-    <LinearLayout
+    <android.support.v7.widget.CardView
+        android:layout_marginTop="50dp"
+        android:id="@+id/cardview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <Spinner
-            android:id="@+id/spinner"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="5dp"
+        app:cardBackgroundColor="#AAA5A5"
+        android:padding="10dp"
+        app:cardCornerRadius="5dp">
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"/>
+            android:orientation="vertical">
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dialog"
 
-        <Button
-            android:id="@+id/btn_go"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/spinner"
-            android:layout_marginTop="50dp"
-            android:text="@string/go" />
-    </LinearLayout>
 
+                />
+
+            <Button
+                android:id="@+id/btn_go"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spinner"
+                android:layout_marginTop="10dp"
+                android:text="@string/go" />
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
 
 
     <TextView
         android:id="@+id/txt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="15pt" />
+        android:textSize="15pt"
+        android:text="Output"
+        android:textAlignment="center"
+        android:layout_below="@id/cardview"/>
 </RelativeLayout>

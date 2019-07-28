@@ -50,7 +50,7 @@
 
         <ImageView
             android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_height="60dp"
             android:background="@color/colorBgicon"
             android:src="@drawable/ic_email_white_45dp" />
 
@@ -82,7 +82,7 @@
 
         <ImageView
             android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_height="60dp"
             android:background="@color/colorBgicon"
             android:src="@drawable/ic_lock_white_45dp" />
 
