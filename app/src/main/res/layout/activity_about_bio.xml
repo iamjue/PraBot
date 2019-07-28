@@ -12,6 +12,7 @@
     tools:context=".AboutBioActivity">
 
     <LinearLayout
+        android:background="@color/colorBG"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -22,7 +23,7 @@
             android:layout_height="wrap_content"
             android:text="@string/biodata"
             android:textAlignment="center"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorcokelat"
             android:textSize="25dp"
             android:textStyle="bold" />
 
@@ -50,7 +51,7 @@
             android:layout_marginTop="10dp"
             android:text="@string/nim"
             android:textAlignment="center"
-            android:textColor="@color/colorBlack" />
+            android:textColor="@color/colorcokelat" />
 
         <TextView
             android:id="@+id/tv_jurusan"
@@ -59,7 +60,7 @@
             android:layout_marginTop="10dp"
             android:text="@string/jurusan"
             android:textAlignment="center"
-            android:textColor="@color/colorBlack" />
+            android:textColor="@color/colorcokelat" />
 
         <TextView
             android:id="@+id/tv_esaunggul"
@@ -68,7 +69,7 @@
             android:layout_marginTop="10dp"
             android:text="@string/esaunggul"
             android:textAlignment="center"
-            android:textColor="@color/colorBlack" />
+            android:textColor="@color/colorcokelat" />
 
         <Button
             android:id="@+id/btn_kembali"

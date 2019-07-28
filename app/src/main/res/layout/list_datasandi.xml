@@ -10,7 +10,7 @@
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardBackgroundColor="#E2D9D9"
+        app:cardBackgroundColor="@color/colorBG"
         app:cardCornerRadius="5dp"
         app:cardElevation="4dp"
         app:cardMaxElevation="5dp"
@@ -27,6 +27,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="monospace"
                 android:text="Huruf "
+                android:textColor="@color/colorcokelat"
                 android:textAlignment="center"
                 android:textSize="10pt"
                 android:textStyle="bold" />
