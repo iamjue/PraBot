@@ -46,12 +46,12 @@
                 android:layout_width="wrap_content"
                 android:text="@string/biodata"
                 android:layout_height="wrap_content"
-                android:background="@color/colorBgicon"
+                android:background="@drawable/button"
                 android:textColor="@color/colorWhite"/>
 
             <Button
                 android:id="@+id/btn_selesai"
-                android:background="@color/colorBgicon"
+                android:background="@drawable/button"
                 android:textColor="@color/colorWhite"
                 android:layout_marginLeft="30dp"
                 android:layout_toRightOf="@id/btn_biodata"

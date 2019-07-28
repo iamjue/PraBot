@@ -38,7 +38,7 @@
         android:layout_below="@id/tv_pramuka_robot"
         android:textSize="18sp"
         android:layout_marginTop="80dp"
-        android:background="@color/colorBgicon"
+        android:background="@drawable/button"
         android:textColor="@color/colorWhite"/>
 
     <Button
@@ -49,7 +49,7 @@
         android:layout_marginTop="15dp"
         android:text="@string/help"
         android:textSize="18sp"
-        android:background="@color/colorBgicon"
+        android:background="@drawable/button"
         android:textColor="@color/colorWhite"/>
 
     <Button
@@ -60,7 +60,7 @@
         android:layout_marginTop="15dp"
         android:text="@string/about"
         android:textSize="18sp"
-        android:background="@color/colorBgicon"
+        android:background="@drawable/button"
         android:textColor="@color/colorWhite"/>
 
     <Button
@@ -71,7 +71,7 @@
         android:layout_marginTop="15dp"
         android:text="@string/exit"
         android:textSize="18sp"
-        android:background="@color/colorBgicon"
+        android:background="@drawable/button"
         android:textColor="@color/colorWhite"/>
 
 </RelativeLayout>
