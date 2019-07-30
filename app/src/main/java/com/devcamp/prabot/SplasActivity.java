@@ -6,7 +6,7 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
 public class SplasActivity extends AppCompatActivity {
-    private int waktu_loading=3000;
+    private int waktu_loading=1500;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

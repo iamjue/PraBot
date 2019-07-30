@@ -40,19 +40,19 @@
     </string-array>
 
     <string name="help_deskrip1">
-        1.Klik ikon WiFi pada HP
+        1. Isi Username dan Password sesuai dengan yang ID Robot lalu klik Login.
     </string>
     <string name="help_deskrip2">
-        2.Pilih / Koneksikan ke WiFi "ESP8266"
+        Setelah Login Success, Pilih tombol About untuk melihat Keterangan Pembuat dan Keterangan Aplikasi.
     </string>
     <string name="help_deskrip3">
-        3.Jika sudah \'Connected\' maka tombol WiFi akan menyala, sebaliknya jika \'Not Connected\' maka tombol tidak menyala
+        3. Pilih tombol Help untuk membaca tata cara menggunakan Aplikasi.
     </string>
     <string name="help_deskrip4">
-        4.Tekan tombol \'POS 0\'  untuk memposisikan robot ke posisi awal
+        4. Pilih tombol Mulai untuk memulai menggerakan Robot.
     </string>
     <string name="help_deskrip5">
-        5.Tekan salah satu tombol
+        5. Dan pilih tombol Exit untuk keluar.
     </string>
     <string name="selesai">Selesai</string>
     <string name="prabot3">Pramuka Robot</string>

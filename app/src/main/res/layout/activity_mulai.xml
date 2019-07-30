@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="5dp"
     tools:context=".MulaiActivity"
-    android:background="@color/colorBG"
+    android:background="@color/colorWhite"
     android:layout_centerInParent="true">
     <android.support.v7.widget.CardView
         android:layout_marginTop="50dp"

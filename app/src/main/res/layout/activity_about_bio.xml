@@ -12,7 +12,7 @@
     tools:context=".AboutBioActivity">
 
     <LinearLayout
-        android:background="@color/colorBG"
+        android:background="@color/colorWhite"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -42,7 +42,7 @@
             android:layout_marginTop="30dp"
             android:text="@string/nama"
             android:textAlignment="center"
-            android:textColor="@color/colorBlack" />
+            android:textColor="@color/colorcokelat" />
 
         <TextView
             android:id="@+id/tv_nim"

@@ -17,11 +17,12 @@
         <activity android:name=".LoginActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
-
         </activity>
         <activity android:name=".AboutAppActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity android:name=".HelpActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".AboutBioActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity android:name=".MainActivity"/>
         <activity android:name=".SplasActivity"

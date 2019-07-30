@@ -56,13 +56,13 @@
             android:layout_height="35dp" />
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_toRightOf="@id/img_icon_username"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/colorWhite"
+            android:layout_toRightOf="@id/img_icon_username">
             <EditText
                 android:id="@+id/edt_username"
-                android:hint="Username"
+                android:hint="Name"
                 android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorWhite"
                 android:inputType="textPersonName"
                 android:layout_weight="1"
                 android:layout_marginLeft="10dp"
@@ -87,12 +87,12 @@
             android:layout_width="match_parent"
             android:layout_toRightOf="@id/img_icon_pwd"
             android:layout_height="wrap_content"
-            app:passwordToggleEnabled="true"           >
+            app:passwordToggleEnabled="true"
+            android:textColorHint="@color/colorWhite">
             <EditText
                 android:id="@+id/edt_password"
                 android:hint="Password"
                 android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorWhite"
                 android:inputType="textPassword"
                 android:layout_marginLeft="5dp"
                 android:layout_width="match_parent"

@@ -7,7 +7,7 @@
     android:paddingLeft="40dp"
     android:paddingRight="40dp"
     tools:context=".HomeActivity"
-    android:background="@color/colorBG"
+    android:background="@color/colorWhite"
     android:orientation="vertical">
 
     <TextView

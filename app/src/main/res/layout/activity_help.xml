@@ -12,7 +12,7 @@
     tools:context=".HelpActivity">
 
     <LinearLayout
-        android:background="@color/colorBG"
+        android:background="@color/colorWhite"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
