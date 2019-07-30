@@ -1,4 +1,4 @@
-package com.devcamp.prabot;
+package com.devcamp.prabot.Activity;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -14,6 +14,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.devcamp.prabot.R;
 
 public class MainActivity extends AppCompatActivity {
 

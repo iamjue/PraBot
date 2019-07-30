@@ -7,25 +7,27 @@
 
 
     <application
-        android:name=".AppController"
+        android:name=".App.AppController"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/semaphore_positions"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/semaphore_positions"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivity"
+        <activity android:name=".Activity.LoginActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
         </activity>
-        <activity android:name=".AboutAppActivity"
+        <activity android:name=".Activity.AboutBioActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
-        <activity android:name=".HelpActivity"
+        <activity android:name=".Activity.AboutAppActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
-        <activity android:name=".AboutBioActivity"
+        <activity android:name=".Activity.HelpActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
-        <activity android:name=".MainActivity"/>
-        <activity android:name=".SplasActivity"
+        <activity android:name=".Activity.AboutBioActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".Activity.MainActivity"/>
+        <activity android:name=".Activity.SplasActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,9 +35,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HomeActivity"
+        <activity android:name=".Activity.HomeActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
-        <activity android:name=".MulaiActivity"
+        <activity android:name=".Activity.MulaiActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
         </activity>

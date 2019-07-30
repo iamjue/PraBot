@@ -8,7 +8,7 @@
     android:gravity="center"
     android:paddingLeft="40dp"
     android:paddingRight="40dp"
-    tools:context=".MainActivity">
+    tools:context=".Activity.MainActivity">
 
     <TextView
         android:id="@+id/tv_login"

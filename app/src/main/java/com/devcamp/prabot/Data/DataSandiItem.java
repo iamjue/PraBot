@@ -1,13 +1,14 @@
-package com.devcamp.prabot;
+package com.devcamp.prabot.Data;
 
 public class DataSandiItem {
-    String id_sandi,huruf,derajat_lengan_x,derajat_lengan_y;
+    String id_sandi,huruf,derajat_lengan_x,derajat_lengan_y,gambar;
 
     public DataSandiItem() {
         this.id_sandi = id_sandi;
         this.huruf = huruf;
         this.derajat_lengan_x = derajat_lengan_x;
         this.derajat_lengan_y = derajat_lengan_y;
+        this.gambar = gambar;
     }
 
     public String getId_sandi() {
@@ -40,5 +41,13 @@ public class DataSandiItem {
 
     public void setDerajat_lengan_y(String derajat_lengan_y) {
         this.derajat_lengan_y = derajat_lengan_y;
+    }
+
+    public String getGambar() {
+        return gambar;
+    }
+
+    public void setGambar(String gambar) {
+        this.gambar = gambar;
     }
 }

@@ -9,7 +9,7 @@
     android:layout_marginLeft="40dp"
     android:layout_marginRight="40dp"
     app:cardCornerRadius="10dp"
-    tools:context=".AboutBioActivity">
+    tools:context=".Activity.AboutBioActivity">
 
     <LinearLayout
         android:background="@color/colorWhite"

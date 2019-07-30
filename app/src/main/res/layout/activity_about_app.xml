@@ -9,7 +9,7 @@
     android:layout_marginLeft="40dp"
     android:layout_marginRight="40dp"
     app:cardCornerRadius="10dp"
-    tools:context=".AboutAppActivity">
+    tools:context=".Activity.AboutAppActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

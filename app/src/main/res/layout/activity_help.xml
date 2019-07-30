@@ -9,7 +9,7 @@
     android:layout_marginLeft="40dp"
     android:layout_marginRight="40dp"
     app:cardCornerRadius="10dp"
-    tools:context=".HelpActivity">
+    tools:context=".Activity.HelpActivity">
 
     <LinearLayout
         android:background="@color/colorWhite"

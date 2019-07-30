@@ -1,4 +1,4 @@
-package com.devcamp.prabot;
+package com.devcamp.prabot.Adapter;
 
 import android.app.Activity;
 import android.content.Context;
@@ -8,12 +8,16 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.devcamp.prabot.Data.DataSandiItem;
+import com.devcamp.prabot.R;
+
 import java.util.List;
 
 public class SpinnerAdapter extends BaseAdapter {
     private Activity activity;
     private LayoutInflater inflater;
     private List<DataSandiItem> dataSandiItems;
+    String huruf;
 
     public SpinnerAdapter(Activity activity, List<DataSandiItem> dataSandiItems) {
         this.activity = activity;
@@ -49,7 +53,12 @@ public class SpinnerAdapter extends BaseAdapter {
         DataSandiItem data;
         data = dataSandiItems.get(position);
 
-        dataSandi.setText("Huruf "+data.getHuruf());
+        if (data.getHuruf().length() > 1 ){
+            dataSandi.setText(data.getHuruf());
+        }else {
+            dataSandi.setText("Huruf "+data.getHuruf());
+        }
+
 
         return convertView;
     }
