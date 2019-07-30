@@ -35,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
     int success;
     ConnectivityManager conMgr;
 
-    private String url = "http://all.3jnc.tech/imanika/api/login.php";
+    private String url = "http://all.3jnc.tech/prabot/api/login.php";
 
     private static final String TAG = LoginActivity.class.getSimpleName();
 

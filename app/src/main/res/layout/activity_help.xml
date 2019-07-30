@@ -12,6 +12,7 @@
     tools:context=".HelpActivity">
 
     <LinearLayout
+        android:background="@color/colorWhite"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -23,7 +24,7 @@
             android:paddingBottom="30dp"
             android:text="@string/help"
             android:textAlignment="center"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorcokelat"
             android:textSize="25dp"
             android:textStyle="bold" />
 
@@ -33,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:text="@string/help_deskrip1"
-            android:textColor="@color/colorBlack" />
+            android:textColor="@color/colorcokelat" />
 
         <TextView
             android:id="@+id/tv_help_deskrip2"
@@ -41,7 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:text="@string/help_deskrip2"
-            android:textColor="@color/colorBlack" />
+            android:textColor="@color/colorcokelat" />
 
         <TextView
             android:id="@+id/tv_help_deskrip3"
@@ -49,7 +50,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:text="@string/help_deskrip3"
-            android:textColor="@color/colorBlack" />
+            android:textColor="@color/colorcokelat" />
 
         <TextView
             android:id="@+id/tv_help_deskrip4"
@@ -57,7 +58,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:text="@string/help_deskrip4"
-            android:textColor="@color/colorBlack" />
+            android:textColor="@color/colorcokelat" />
 
         <TextView
             android:id="@+id/tv_help_deskrip5"
@@ -65,7 +66,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:text="@string/help_deskrip5"
-            android:textColor="@color/colorBlack" />
+            android:textColor="@color/colorcokelat" />
 
         <Button
             android:id="@+id/btn_selesai"

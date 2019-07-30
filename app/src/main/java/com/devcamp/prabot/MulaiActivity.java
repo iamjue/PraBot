@@ -49,8 +49,8 @@ public class MulaiActivity extends AppCompatActivity {
     TextView tv;
     Context context;
 
-    public static final String url = "http://all.3jnc.tech/imanika/api/sandi_data.php";
-    public static final String urlAdd = "http://all.3jnc.tech/imanika/api/insert.php";
+    public static final String url = "http://all.3jnc.tech/prabot/api/sandi_data.php";
+    public static final String urlAdd = "http://all.3jnc.tech/prabot/api/insert.php";
     private static final String TAG_SUCCESS = "success";
     private static final String TAG_MESSAGE = "message";
     String tag_json_obj = "json_obj_req";
@@ -98,7 +98,8 @@ public class MulaiActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(MulaiActivity.this, "Pilihan anda : " + pilih, Toast.LENGTH_SHORT).show();
                 Add();
-                tv.setText(pilih + " " + drajatX + " " + drajatY);
+                //tv.setText(pilih + " " + drajatX + " " + drajatY);
+                tv.setText(pilih + " ");
             }
         });
         callData();

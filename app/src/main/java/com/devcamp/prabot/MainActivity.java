@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     SharedPreferences sharedpreferences;
 
     public static final String TAG_ID = "id";
-    public static final String TAG_USERNAME = "username";
+    public static final String TAG_USERNAME = "nama";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
