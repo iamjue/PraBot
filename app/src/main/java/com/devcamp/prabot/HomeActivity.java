@@ -15,7 +15,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     SharedPreferences sharedpreferences;
 
     public static final String TAG_ID = "id";
-    public static final String TAG_USERNAME = "nama";
+    public static final String TAG_USERNAME = "username";
 
     String getId;
     @Override

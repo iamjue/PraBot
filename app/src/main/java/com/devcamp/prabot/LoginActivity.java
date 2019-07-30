@@ -42,7 +42,7 @@ public class LoginActivity extends AppCompatActivity {
     private static final String TAG_SUCCESS = "success";
     private static final String TAG_MESSAGE = "message";
 
-    public final static String TAG_USERNAME = "nama";
+    public final static String TAG_USERNAME = "username";
     public final static String TAG_ID = "id";
 
     String tag_json_obj = "json_obj_req";
@@ -179,7 +179,7 @@ public class LoginActivity extends AppCompatActivity {
             protected Map<String, String> getParams() {
                 // Posting parameters to login url
                 Map<String, String> params = new HashMap<String, String>();
-                params.put("nama", username);
+                params.put("username", username);
                 params.put("password", password);
 
                 return params;

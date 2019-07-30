@@ -61,7 +61,7 @@
             android:layout_toRightOf="@id/img_icon_username">
             <EditText
                 android:id="@+id/edt_username"
-                android:hint="Name"
+                android:hint="Username"
                 android:textColor="@color/colorWhite"
                 android:inputType="textPersonName"
                 android:layout_weight="1"
