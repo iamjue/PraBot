@@ -8,6 +8,8 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -47,20 +49,16 @@ public class MulaiActivity extends AppCompatActivity {
     ProgressDialog pDialog;
     SpinnerAdapter adapter;
     List<DataSandiItem> dataSandiItem = new ArrayList<>();
-    List<DataUpdateItem>dataUpdateItems = new ArrayList<>();
-    TextView tv;
-    Context context;
+    TextView tvOutput;
     ImageView imgGambar;
+    WebView web;
 
-    private static final String TAG_SUCCESS = "success";
-    private static final String TAG_MESSAGE = "message";
-    String tag_json_obj = "json_obj_req";
-    int success;
+
     private static final String TAG = MulaiActivity.class.getSimpleName();
+    Handler handler = new Handler();
+    Runnable refresh;
 
-
-    String huruf, drajatX, drajatY,gambar,xhuruf, xdrajatX, xdrajatY,xgambar;
-
+    String huruf, drajatX, drajatY, gambar, xhuruf, xdrajatX, xdrajatY, xgambar;
 
 
     @Override
@@ -68,11 +66,16 @@ public class MulaiActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mulai);
 
-        spinnerHuruf = (Spinner) findViewById(R.id.spinner);
+        spinnerHuruf = findViewById(R.id.spinner);
         btnGo = findViewById(R.id.btn_go);
         imgGambar = findViewById(R.id.img_gambar);
+        tvOutput = findViewById(R.id.tv_output);
+        web = findViewById(R.id.web);
 
-        tv = findViewById(R.id.tv_output);
+        web.loadUrl(ApiServer.server + "sandi_android.php");
+        web.setWebViewClient(new WebViewClient());
+
+
         spinnerHuruf.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
             @Override
@@ -100,16 +103,22 @@ public class MulaiActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Add();
-                imgGambar.setImageResource(R.drawable.semaphore_positions);
-                getgamabar();
-                return;
 
             }
         });
         callDataSpinner();
+        refresh = new Runnable() {
+            public void run() {
+                // Do something
+                handler.postDelayed(refresh, 1000);
+                Update();
 
+            }
+        };
+        handler.post(refresh);
 
     }
+
 
     private void callDataSpinner() {
         dataSandiItem.clear();
@@ -120,7 +129,7 @@ public class MulaiActivity extends AppCompatActivity {
         showDialog();
 
         // Creating volley request obj
-        JsonArrayRequest jArr = new JsonArrayRequest(ApiServer.server+"sandi_data.php",
+        JsonArrayRequest jArr = new JsonArrayRequest(ApiServer.server + "sandi_data.php",
                 new Response.Listener<JSONArray>() {
                     @Override
                     public void onResponse(JSONArray response) {
@@ -169,7 +178,7 @@ public class MulaiActivity extends AppCompatActivity {
     private void Add() {
 
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, ApiServer.server+"insert.php",
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, ApiServer.server + "update_android.php",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String ServerResponse) {
@@ -177,12 +186,15 @@ public class MulaiActivity extends AppCompatActivity {
 
                         String resetKiri = "Reset Left";
                         String resetKanan = "Reset Right";
-                        if (ServerResponse.toString().trim().equals("Semaphore Flags reset kanan")){
-                            tv.setText(resetKanan);
-                        }else if (ServerResponse.toString().trim().equals("Semaphore Flags reset kiri")){
-                            tv.setText(resetKiri);
-                        }else {
-                            tv.setText(ServerResponse.toString().trim());
+                        if (ServerResponse.toString().trim().equals("Semaphore Flags Reset Right")) {
+                            tvOutput.setText(resetKanan);
+                            Toast.makeText(MulaiActivity.this, resetKanan, Toast.LENGTH_SHORT).show();
+                        } else if (ServerResponse.toString().trim().equals("Semaphore Flags Reset Left")) {
+                            tvOutput.setText(resetKiri);
+                            Toast.makeText(MulaiActivity.this, resetKiri, Toast.LENGTH_SHORT).show();
+                        } else {
+                            tvOutput.setText(ServerResponse.toString().trim());
+                            Toast.makeText(MulaiActivity.this, ServerResponse.toString().trim(), Toast.LENGTH_SHORT).show();
                         }
 
                     }
@@ -222,50 +234,41 @@ public class MulaiActivity extends AppCompatActivity {
         requestQueue.add(stringRequest);
 
     }
-    private void getgamabar(){
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Glide.with(MulaiActivity.this).load(gambar).into(imgGambar);
-                return ;
 
-            }
-        },3000L);
-    }
 
     private void Update() {
 
-        StringRequest stringRequest = new StringRequest( Request.Method.GET, ApiServer.server+"sandi_android.php", new Response.Listener<String>() {
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, ApiServer.server + "sandi_android.php", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
 //
                 try {
                     JSONObject responseObject = new JSONObject(response);
                     xhuruf = responseObject.getJSONArray("sandi_android").getJSONObject(0).getString("huruf");
-                    xdrajatX =responseObject.getJSONArray("sandi_android").getJSONObject(0).getString("derajat_lengan_x");
-                    xdrajatY=responseObject.getJSONArray("sandi_android").getJSONObject(0).getString("derajat_lengan_y");
-                    xgambar =responseObject.getJSONArray("sandi_android").getJSONObject(0).getString("gambar");
+                    xdrajatX = responseObject.getJSONArray("sandi_android").getJSONObject(0).getString("derajat_lengan_x");
+                    xdrajatY = responseObject.getJSONArray("sandi_android").getJSONObject(0).getString("derajat_lengan_y");
+                    xgambar = responseObject.getJSONArray("sandi_android").getJSONObject(0).getString("gambar");
 
 
-                }catch (Exception e){
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
-//                String xy= "0";
-//                if (xdrajatX.toString().equals(xy)&&xdrajatY.toString().equals(xy)){
+                imgGambar.setImageResource(R.drawable.semaphore_positions);
+                String xy = "0";
+                if (xdrajatX.toString().equals(xy) && xdrajatY.toString().equals(xy)) {
                     Glide.with(MulaiActivity.this).load(xgambar).into(imgGambar);
-//                }
+                }
 
 
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText( getApplicationContext(), error.getMessage(), Toast.LENGTH_SHORT ).show();
+                Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
             }
-        } );
-        RequestQueue requestQueue = Volley.newRequestQueue( this );
-        requestQueue.add( stringRequest );
+        });
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
 
     }
 

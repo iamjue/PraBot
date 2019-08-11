@@ -10,16 +10,15 @@ import android.widget.Button;
 
 import com.devcamp.prabot.R;
 
-public class HomeActivity extends AppCompatActivity implements View.OnClickListener{
+public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button btnMulai, btnHelp, btnAbout, btnExit;
-    String id, username;
     SharedPreferences sharedpreferences;
 
     public static final String TAG_ID = "id";
     public static final String TAG_USERNAME = "username";
 
-    String getId;
+
     @Override
     protected void onCreate(Bundle saveInstanceState) {
         super.onCreate(saveInstanceState);
@@ -38,12 +37,12 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         btnExit.setOnClickListener(this);
 
 
-        sharedpreferences = getSharedPreferences( LoginActivity.my_shared_preferences, Context.MODE_PRIVATE );
+        sharedpreferences = getSharedPreferences(LoginActivity.my_shared_preferences, Context.MODE_PRIVATE);
     }
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.btn_mulai:
                 Intent intentMulai = new Intent(HomeActivity.this, MulaiActivity.class);
                 startActivity(intentMulai);
@@ -58,14 +57,14 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_exit:
                 SharedPreferences.Editor editor = sharedpreferences.edit();
-                editor.putBoolean( LoginActivity.session_status, false );
-                editor.putString( TAG_ID, null );
-                editor.putString( TAG_USERNAME, null );
+                editor.putBoolean(LoginActivity.session_status, false);
+                editor.putString(TAG_ID, null);
+                editor.putString(TAG_USERNAME, null);
                 editor.commit();
 
-                Intent intent = new Intent( HomeActivity.this, LoginActivity.class );
+                Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
                 finish();
-                startActivity( intent );
+                startActivity(intent);
                 break;
 
         }

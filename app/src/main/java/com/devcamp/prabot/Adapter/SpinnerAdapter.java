@@ -17,7 +17,6 @@ public class SpinnerAdapter extends BaseAdapter {
     private Activity activity;
     private LayoutInflater inflater;
     private List<DataSandiItem> dataSandiItems;
-    String huruf;
 
     public SpinnerAdapter(Activity activity, List<DataSandiItem> dataSandiItems) {
         this.activity = activity;
@@ -53,10 +52,10 @@ public class SpinnerAdapter extends BaseAdapter {
         DataSandiItem data;
         data = dataSandiItems.get(position);
 
-        if (data.getHuruf().length() > 1 ){
+        if (data.getHuruf().length() > 1) {
             dataSandi.setText(data.getHuruf());
-        }else {
-            dataSandi.setText("Huruf "+data.getHuruf());
+        } else {
+            dataSandi.setText("Huruf " + data.getHuruf());
         }
 
 

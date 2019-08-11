@@ -14,13 +14,13 @@ public class AboutAppActivity extends AppCompatActivity {
     Button btnBio, btnSelesai;
 
     @Override
-    protected void onCreate( Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_app);
 
-        cardView = (CardView)findViewById(R.id.cv_aboutApp);
+        cardView = (CardView) findViewById(R.id.cv_aboutApp);
 
-        btnSelesai = (Button)findViewById(R.id.btn_selesai);
+        btnSelesai = (Button) findViewById(R.id.btn_selesai);
         btnSelesai.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -29,7 +29,7 @@ public class AboutAppActivity extends AppCompatActivity {
             }
         });
 
-        btnBio = (Button)findViewById(R.id.btn_biodata);
+        btnBio = (Button) findViewById(R.id.btn_biodata);
         btnBio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

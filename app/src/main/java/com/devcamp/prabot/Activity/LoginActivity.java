@@ -24,6 +24,7 @@ import com.devcamp.prabot.Server.ApiServer;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -119,7 +120,7 @@ public class LoginActivity extends AppCompatActivity {
         pDialog.setMessage("Login, Pleas Wait....");
         showDialog();
 
-        StringRequest strReq = new StringRequest(Request.Method.POST, ApiServer.server+"login.php", new Response.Listener<String>() {
+        StringRequest strReq = new StringRequest(Request.Method.POST, ApiServer.server + "login.php", new Response.Listener<String>() {
 
             @Override
             public void onResponse(String response) {

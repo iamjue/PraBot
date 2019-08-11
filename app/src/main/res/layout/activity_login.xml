@@ -8,7 +8,7 @@
     android:gravity="center"
     android:paddingLeft="40dp"
     android:paddingRight="40dp"
-    tools:context=".Activity.MainActivity">
+    tools:context=".Activity.LoginActivity">
 
     <TextView
         android:id="@+id/tv_login"
@@ -28,9 +28,9 @@
         android:text="@string/prabot3"
         android:textAlignment="center"
         android:textColor="@color/colorcokelat"
+        android:textDirection="firstStrong"
         android:textSize="30sp"
-        android:textStyle="italic"
-        android:textDirection="firstStrong"/>
+        android:textStyle="italic" />
 
     <ImageView
         android:id="@+id/img_account"
@@ -43,80 +43,87 @@
 
     <RelativeLayout
         android:id="@+id/layout_text_username"
-        android:layout_below="@id/img_account"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/img_account"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="16dp">
+
         <ImageView
             android:id="@+id/img_icon_username"
-            android:src="@drawable/ic_username"
-            android:layout_centerVertical="true"
             android:layout_width="50dp"
-            android:layout_height="35dp" />
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_username" />
+
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="@color/colorWhite"
-            android:layout_toRightOf="@id/img_icon_username">
+            android:layout_toRightOf="@id/img_icon_username"
+            android:textColorHint="@color/colorWhite">
+
             <EditText
                 android:id="@+id/edt_username"
-                android:hint="Username"
-                android:textColor="@color/colorWhite"
-                android:inputType="textPersonName"
-                android:layout_weight="1"
-                android:layout_marginLeft="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"  />
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:hint="Username"
+                android:inputType="textPersonName"
+                android:textColor="@color/colorWhite" />
         </android.support.design.widget.TextInputLayout>
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/layout_password"
-        android:layout_below="@id/layout_text_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/layout_text_username"
         android:layout_marginBottom="16dp">
+
         <ImageView
-            android:src="@drawable/ic_password"
             android:id="@+id/img_icon_pwd"
-            android:layout_centerVertical="true"
             android:layout_width="50dp"
-            android:layout_height="35dp" />
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_password" />
+
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_toRightOf="@id/img_icon_pwd"
             android:layout_height="wrap_content"
-            app:passwordToggleEnabled="true"
-            android:textColorHint="@color/colorWhite">
+            android:layout_toRightOf="@id/img_icon_pwd"
+            android:textColorHint="@color/colorWhite"
+            app:passwordToggleEnabled="true">
+
             <EditText
                 android:id="@+id/edt_password"
-                android:hint="Password"
-                android:textColor="@color/colorWhite"
-                android:inputType="textPassword"
-                android:layout_marginLeft="5dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textColor="@color/colorWhite" />
         </android.support.design.widget.TextInputLayout>
     </RelativeLayout>
 
 
     <android.support.v7.widget.CardView
-        android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
-        android:padding="3dp"
-        android:layout_below="@id/layout_password"
         android:layout_height="wrap_content"
+        android:layout_below="@id/layout_password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:padding="3dp"
         app:cardCornerRadius="10dp"
         app:cardElevation="10dp"
-        android:layout_centerHorizontal="true"
-        app:cardPreventCornerOverlap="true"
-        app:cardMaxElevation="10dp">
+        app:cardMaxElevation="10dp"
+        app:cardPreventCornerOverlap="true">
+
         <Button
             android:id="@+id/btn_login"
-            android:layout_below="@id/layout_password"
             android:layout_width="120dp"
             android:layout_height="40dp"
+            android:layout_below="@id/layout_password"
             android:layout_centerHorizontal="true"
             android:background="@drawable/button"
             android:text="@string/login"
@@ -144,9 +151,9 @@
 
     <ProgressBar
         android:id="@+id/loading_in"
-        android:layout_marginTop="35dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:visibility="gone"/>
+        android:layout_marginTop="35dp"
+        android:visibility="gone" />
 </RelativeLayout>

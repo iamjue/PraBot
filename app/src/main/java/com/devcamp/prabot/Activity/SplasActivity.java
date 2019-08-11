@@ -8,7 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import com.devcamp.prabot.R;
 
 public class SplasActivity extends AppCompatActivity {
-    private int waktu_loading=1500;
+    private int waktu_loading = 1500;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +22,6 @@ public class SplasActivity extends AppCompatActivity {
                 startActivity(Home);
                 finish();
             }
-        },waktu_loading);
+        }, waktu_loading);
     }
 }

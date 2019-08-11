@@ -1,55 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="5dp"
-    tools:context=".Activity.MulaiActivity"
+    android:layout_centerInParent="true"
     android:background="@color/colorWhite"
-    android:layout_centerInParent="true">
+    android:padding="5dp"
+    tools:context=".Activity.MulaiActivity">
+
     <TextView
         android:id="@+id/tv_pramuka_robot"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="@string/prabot3"
         android:textAlignment="center"
         android:textColor="@color/colorcokelat"
         android:textSize="35sp"
-        android:textStyle="italic|bold"
-        android:layout_marginTop="10dp"/>
+        android:textStyle="italic|bold" />
+
     <android.support.v7.widget.CardView
-        android:layout_marginTop="20dp"
         android:id="@+id/cardview_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardUseCompatPadding="true"
-        app:cardElevation="5dp"
         android:layout_below="@id/tv_pramuka_robot"
+        android:layout_marginTop="20dp"
         app:cardBackgroundColor="#AAA5A5"
-        app:cardCornerRadius="5dp">
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="5dp">
+
             <Spinner
                 android:id="@+id/spinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:spinnerMode="dialog"
                 android:layout_marginTop="5dp"
-                />
+                android:spinnerMode="dialog" />
 
             <Button
                 android:id="@+id/btn_go"
-                android:background="@drawable/button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/spinner"
                 android:layout_marginTop="15dp"
+                android:background="@drawable/button"
                 android:text="@string/go"
-                android:textColor="@color/colorWhite"/>
+                android:textColor="@color/colorWhite" />
         </LinearLayout>
 
     </android.support.v7.widget.CardView>
@@ -59,38 +62,44 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/cardview_input"
         android:layout_marginTop="20dp"
-        app:cardUseCompatPadding="true"
-        app:cardElevation="5dp"
         app:cardBackgroundColor="#AAA5A5"
-        app:cardCornerRadius="5dp">
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:gravity="center"
             android:orientation="vertical"
-            android:padding="5dp"
-            android:gravity="center">
+            android:padding="5dp">
+
             <TextView
                 android:id="@+id/tv_output"
                 android:layout_width="match_parent"
                 android:layout_height="20pt"
-                android:textSize="15pt"
                 android:text="@string/semaphore_flags"
-                android:textColor="@color/colorcokelat"
                 android:textAlignment="center"
+                android:textColor="@color/colorcokelat"
+                android:textSize="15pt"
                 android:textStyle="bold|italic" />
 
             <ImageView
                 android:id="@+id/img_gambar"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
-                android:src
-                    ="@drawable/semaphore_positions"
                 android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"/>
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/semaphore_positions" />
 
         </LinearLayout>
 
     </android.support.v7.widget.CardView>
-
+    <WebView
+        android:id="@+id/web"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+       />
 
 </RelativeLayout>

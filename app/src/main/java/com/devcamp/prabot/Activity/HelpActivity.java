@@ -18,14 +18,14 @@ public class HelpActivity extends AppCompatActivity {
         super.onCreate(saveInstanceState);
         setContentView(R.layout.activity_help);
 
-        cardView = (CardView)findViewById(R.id.cardview_help);
+        cardView = (CardView) findViewById(R.id.cardview_help);
 
-        btnSelesai = (Button)findViewById(R.id.btn_selesai);
+        btnSelesai = (Button) findViewById(R.id.btn_selesai);
         btnSelesai.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               startActivity(new Intent(HelpActivity.this, HomeActivity.class));
-               finish();
+                startActivity(new Intent(HelpActivity.this, HomeActivity.class));
+                finish();
             }
         });
     }

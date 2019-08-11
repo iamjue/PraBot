@@ -3,25 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroun1"
     android:gravity="center"
-    tools:context=".Activity.MainActivity"
-    android:background="@drawable/backgroun1">
+    tools:context=".Activity.SplasActivity">
 
-    <!--<TextView-->
-        <!--android:id="@+id/tv_splash_prabot"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="@string/prabot"-->
-        <!--android:textAlignment="center"-->
-        <!--android:textSize="30sp" />-->
-
-    <!--<TextView-->
-        <!--android:id="@+id/tv_splash_prabot2"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_below="@id/tv_splash_prabot"-->
-        <!--android:text="@string/prabot2"-->
-        <!--android:textAlignment="center"-->
-        <!--android:textSize="30sp" />-->
 
 </RelativeLayout>

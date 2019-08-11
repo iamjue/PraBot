@@ -1,7 +1,7 @@
 package com.devcamp.prabot.Data;
 
 public class DataUpdateItem {
-    String id_sandi,huruf,derajat_lengan_x,derajat_lengan_y,gambar;
+    String id_sandi, huruf, derajat_lengan_x, derajat_lengan_y, gambar;
 
     public DataUpdateItem(String id_sandi, String huruf, String derajat_lengan_x, String derajat_lengan_y, String gambar) {
         this.id_sandi = id_sandi;

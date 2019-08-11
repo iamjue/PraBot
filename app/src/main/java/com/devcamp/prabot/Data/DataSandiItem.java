@@ -1,7 +1,7 @@
 package com.devcamp.prabot.Data;
 
 public class DataSandiItem {
-    String id_sandi,huruf,derajat_lengan_x,derajat_lengan_y,gambar;
+    String id_sandi, huruf, derajat_lengan_x, derajat_lengan_y, gambar;
 
     public DataSandiItem() {
         this.id_sandi = id_sandi;

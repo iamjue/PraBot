@@ -3,12 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorWhite"
     android:gravity="center"
+    android:orientation="vertical"
     android:paddingLeft="40dp"
     android:paddingRight="40dp"
-    tools:context=".Activity.HomeActivity"
-    android:background="@color/colorWhite"
-    android:orientation="vertical">
+    tools:context=".Activity.HomeActivity">
 
     <TextView
         android:id="@+id/tv_login"
@@ -35,12 +35,12 @@
         android:id="@+id/btn_mulai"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/mulai"
         android:layout_below="@id/tv_pramuka_robot"
-        android:textSize="18sp"
         android:layout_marginTop="80dp"
         android:background="@drawable/button"
-        android:textColor="@color/colorWhite"/>
+        android:text="@string/mulai"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/btn_help"
@@ -48,10 +48,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/btn_mulai"
         android:layout_marginTop="15dp"
-        android:text="@string/help"
-        android:textSize="18sp"
         android:background="@drawable/button"
-        android:textColor="@color/colorWhite"/>
+        android:text="@string/help"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/btn_about"
@@ -59,10 +59,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/btn_help"
         android:layout_marginTop="15dp"
-        android:text="@string/about"
-        android:textSize="18sp"
         android:background="@drawable/button"
-        android:textColor="@color/colorWhite"/>
+        android:text="@string/about"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/btn_exit"
@@ -70,9 +70,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/btn_about"
         android:layout_marginTop="15dp"
-        android:text="@string/exit"
-        android:textSize="18sp"
         android:background="@drawable/button"
-        android:textColor="@color/colorWhite"/>
+        android:text="@string/exit"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp" />
 
 </RelativeLayout>
